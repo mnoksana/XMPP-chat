@@ -1,4 +1,4 @@
-# XMPP-IOT-client-server
+# XMPP chat
 The program that implements XMPP chat between two users  
 
 #### Requirements
