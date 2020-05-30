@@ -18,5 +18,5 @@ python -m pip install -r requirements.txt
 To run the application in normal mode, use the command:
 
 ```bash
-python3 program.py
+python program.py
 ```
