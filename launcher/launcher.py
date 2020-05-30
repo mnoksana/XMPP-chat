@@ -12,14 +12,14 @@ class Launcher:
     @classmethod
     def launch(cls):
         with open('sender_config.json', 'r') as configFile:
-            sender_config = json.load(configFile)
-        sender = XMPPSender(**sender_config)
+            sender_config = json.load(configFile)   # load json config for sender
+        sender = XMPPSender(**sender_config)    # map config to constructor
         with open('receiver_config.json', 'r') as configFile:
-            receiver_config = json.load(configFile)
-        receiver = XMPPReceiver(**receiver_config)
-        receiver.start()
+            receiver_config = json.load(configFile)     # load json config for receiver
+        receiver = XMPPReceiver(**receiver_config)  # map config to constructor
+        receiver.start()    # start receiver thread
 
-        while sender.connection.isConnected():
+        while sender.connection.isConnected():  # messaging while connection is alive
             body = raw_input("Sent message: ")
             sender.send(str(receiver_config['receiver_login']), body)
             sleep(1)
