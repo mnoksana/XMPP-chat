@@ -13,3 +13,10 @@ To work with XMPP, you must also install additional Python modules using the com
 ```bash
 python -m pip install -r requirements.txt
 ```
+#### Running
+
+To run the application in normal mode, use the command:
+
+```bash
+python3 program.py
+```
